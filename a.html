@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WarpFuel Energy</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        nav {
+            background-color: black;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: rgba(255, 26, 26, 0.502);
+        }
+        
+        .content-padding {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- MENÚ DE NAVEGACIÓ -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Inici</a></li>
+            <li><a href="#missio">Missió</a></li>
+            <li><a href="#begudes">Begudes</a></li>
+            <li><a href="#testimonis">FuelVoice</a></li>
+            <li><a href="#racing">Contactan's</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="poster.jpg">
+      <source src="Video HeroSection.mp4" type="video/mp4">
+      El teu navegador no admet vídeos HTML5.
+    </video>
+        <div class="hero-content">
+            <h1>WarpFuel</h1>
+            <p>Energia de competició per a rendiment extrem</p><br><br>
+            <a href="#begudes" class="btn">Descobreix les Begudes</a>
+        </div>
+    </section>
+
+
+
+    <!-- MISSIÓ -->
+    <section id="missio" class="section parallax-missio">
+        <h2 class="title">Missió WarpFuel</h2>
+        <p>Impulsar el teu rendiment mental i físic amb energia neta, agressiva i inspiradora. WarpFuel no és només una beguda, és un estil de vida per als que no s’aturen mai.</p>
+    </section>
+
+
+
+    <!-- PRODUCTES -->
+    <section id="begudes" class="section">
+        <h2 class="title">El nostre fuel</h2>
+        <div class="grid cans-grid">
+            <div class="can-card">
+                <img src="rojo.PNG" alt="WarpFuel">
+                <div class="can-info">
+                    <h3>WarpFuel - Strawberry 🍓</h3>
+                    <p>Una explosió de frescor i energia per afrontar qualsevol repte.</p>
+                </div>
+            </div>
+            <div class="can-card">
+                <img src="azul.png" alt="WarpFuel">
+                <div class="can-info">
+                    <h3>WarpFuel - Blueberry 🫐</h3>
+                    <p>Sabor intens i energètic que t'ajudarà a arribar més lluny.</p>
+                </div>
+            </div>
+            <div class="can-card">
+                <img src="verde.png" alt="WarpFuel">
+                <div class="can-info">
+                    <h3>WarpFuel - Apple 🍏</h3>
+                    <p>Per una energia fresca i duradora que no et fallarà.</p>
+                </div>
+            </div>
+            <div class="can-card">
+                <img src="lila.png" alt="WarpFuel">
+                <div class="can-info">
+                    <h3>WarpFuel - Tropical 💜</h3>
+                    <p>Una combinació tropical per activar-te amb tota la força.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIS -->
+    <section id="testimonis" class="section dark">
+        <h2 class="title">FuelVoice</h2>
+
+        <!-- carrusel -->
+        <div class="carousel">
+            <button class="carousel-btn prev">‹</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <div class="slide-content">
+                            <img src="negrito.png" alt="Lewis Hamilton" />
+                            <p>"WarpFuel és la meva gasolina diària. Des que la prenc, rendeixo més als entrenaments!"</p>
+                            <strong>– Lewis Hamilton, Piloto de F1</strong>
+                        </div>
+                    </li>
+                    <li class="carousel-slide">
+                        <div class="slide-content">
+                            <img src="marcx.jpg" alt="Marc Marquez" />
+                            <p>"Té un gust increïble i realment m’ajuda quan estic editant vídeos durant hores."</p>
+                            <strong>– Marc Márquez, Campeón de MotoGP</strong>
+                        </div>
+                    </li>
+                    <li class="carousel-slide">
+                        <div class="slide-content">
+                            <img src="nano.jpg" alt="Nano" />
+                            <p>"Una dosi de concentració i potència. Perfecta per a sessions de gaming llargues."</p>
+                            <strong>– Fernando Alonso, Leyenda de la Fórmula 1</strong>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel-btn next">›</button>
+        </div>
+
+        <!-- CTA -->
+        <div class="fuelvoice-cta">
+            <p>Vols que la teva experiència formi part de FuelVoice?</p>
+            <button id="open-form-btn" class="btn">Deixa el teu testimoni</button>
+        </div>
+
+        <!-- formulari -->
+        <div id="testimoni-form-container" class="testimoni-form-container hidden">
+            <form id="testimoni-form">
+                <h3>Deixa el teu testimoni</h3>
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required />
+                <label for="text-testimoni">Testimoni:</label>
+                <textarea id="text-testimoni" name="text-testimoni" rows="4" required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+                <button type="button" id="cancel-form-btn" class="btn cancel">Cancel·lar</button>
+            </form>
+        </div>
+    </section>
+
+    <style>
+        #testimonis {
+            background: #111;
+            color: #eee;
+            padding: 3rem 1rem;
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .carousel {
+            position: relative;
+            max-width: 700px;
+            margin: 1rem auto 2rem auto;
+            overflow: hidden;
+        }
+        
+        .carousel-track-container {
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.6s ease;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slide-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 600px;
+            text-align: center;
+            opacity: 0.5;
+            transform: scale(0.9);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        
+        .carousel-slide.current-slide .slide-content {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .slide-content img {
+            border-radius: 50%;
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            box-shadow: 0 0 15px #ff1a1a;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .carousel-slide.current-slide .slide-content img {
+            box-shadow: 0 0 30px #ff4d4d;
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 26, 26, 0.7);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            padding: 0 15px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .carousel-btn:hover {
+            background: #ff1a1a;
+        }
+        
+        .carousel-btn.prev {
+            left: 10px;
+        }
+        
+        .carousel-btn.next {
+            right: 10px;
+        }
+        
+        .fuelvoice-cta {
+            margin-top: 2rem;
+        }
+        
+        .fuelvoice-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .testimoni-form-container {
+            max-width: 400px;
+            margin: 1.5rem auto;
+            background: #222;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 15px #ff1a1a;
+        }
+        
+        .testimoni-form-container.hidden {
+            display: none;
+        }
+        
+        #testimoni-form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #testimoni-form label {
+            margin-top: 1rem;
+            font-weight: 700;
+            text-align: left;
+        }
+        
+        #testimoni-form input,
+        #testimoni-form textarea {
+            margin-top: 0.4rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        #testimoni-form button {
+            margin-top: 1.5rem;
+            padding: 0.7rem;
+            background: #ff1a1a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        #testimoni-form button:hover {
+            background: #cc0000;
+        }
+        
+        #testimoni-form button.cancel {
+            background: gray;
+            margin-top: 0.7rem;
+        }
+        
+        #testimoni-form button.cancel:hover {
+            background: #555;
+        }
+    </style>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.carousel-btn.next');
+        const prevButton = document.querySelector('.carousel-btn.prev');
+        let currentIndex = 0;
+
+        function updateSlidePosition() {
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+            slides.forEach((slide, idx) => {
+                slide.classList.toggle('current-slide', idx === currentIndex);
+            });
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlidePosition();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlidePosition();
+        });
+
+        const openFormBtn = document.getElementById('open-form-btn');
+        const formContainer = document.getElementById('testimoni-form-container');
+        const cancelFormBtn = document.getElementById('cancel-form-btn');
+        const testimoniForm = document.getElementById('testimoni-form');
+
+        openFormBtn.addEventListener('click', () => {
+            formContainer.classList.remove('hidden');
+            openFormBtn.disabled = true;
+        });
+
+        cancelFormBtn.addEventListener('click', () => {
+            formContainer.classList.add('hidden');
+            openFormBtn.disabled = false;
+        });
+
+        testimoniForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Gràcies pel teu testimoni!');
+            testimoniForm.reset();
+            formContainer.classList.add('hidden');
+            openFormBtn.disabled = false;
+        });
+    </script>
+
+
+    <!-- NACUT A LA PISTA (PARALLAX) -->
+    <section class="section parallax-missio">
+        <br><br><br><br><br><br><br><br><br><br><br>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div id="racing" class="footer-content">
+            <p>© 2025 WarpFuel Energy · Powered by Adrenaline</p>
+            <div class="links">
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://www.tiktok.com/en/">TikTok</a>
+                <a href="https://x.com/">X</a>
+            </div>
+            <div class="contact">
+                <p>infofuel@warpfuel.com</p>
+                <p>+34 600 123 456</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // función para animar la sección al llegar por ancla
+        function highlightSection(id) {
+            const section = document.getElementById(id);
+            if (!section) return;
+            section.classList.add('highlighted');
+            setTimeout(() => {
+                section.classList.remove('highlighted');
+            }, 1000); // duración del efecto
+        }
+
+        // al cargar la página, si hay hash, resalta esa sección
+        if (window.location.hash) {
+            const id = window.location.hash.substring(1);
+            highlightSection(id);
+        }
+
+        // detectar clicks en enlaces de ancla y resaltar destino
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                const targetId = link.getAttribute('href').substring(1);
+                // pequeña demora para que el scroll ocurra primero
+                setTimeout(() => {
+                    highlightSection(targetId);
+                }, 300);
+            });
+        });
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .highlighted {
+            animation: highlightAnim 1s ease forwards;
+        }
+        
+        @keyframes highlightAnim {
+            0% {
+                background-color: #fff3a0;
+            }
+            100% {
+                background-color: transparent;
+            }
+        }
+    </style>
+
+
+</body>
+
+
+
+
+</html>
